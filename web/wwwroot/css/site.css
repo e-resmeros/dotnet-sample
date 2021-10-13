@@ -1,0 +1,385 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background: #f9f9f9;
+  font-family: 'Poppins', sans-serif !important;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+.login-form {
+  width: 50%;
+  margin: 10% auto;
+  font-size: 15px;
+}
+.login-form form {
+  margin-bottom: 15px;
+  background: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  border-radius: 10px;
+}
+.login-form h2 {
+  margin: 0 0 15px;
+}
+.form-control, .btn {
+  min-height: 38px;
+}
+
+.login-form .input-prefix {
+  color: #7a7a7a !important;
+}
+
+.login-form .btn {
+  background: #003c83;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.login-form .logo {
+  width: 100%;
+}
+
+.btn {        
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.modal-rounded {
+  color: #003c83;
+  border-radius: 10px !important;
+}
+
+.modal-btn {
+  width: 20%; 
+}
+
+.modal-btn-cancel {
+  background: #fabe00 !important;
+}
+
+.modal-btn-ok {
+  background-color: #003c83 !important;
+  color: #ffffff !important;
+}
+
+.modal-header {
+  display: block !important;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background:#fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+  box-shadow: inset -1px 0px 0px 0px #DDDDDD;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  background: #ffffff;
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li:not(.sidebar-brand){
+  text-indent: 2em;
+  line-height: 4em;
+  background-color: #fabe00;
+}
+
+.sidebar-nav li a {
+  margin-left: 2em;
+  display: block;
+  text-decoration: none;
+  color: #003c83 !important;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar-nav > .sidebar-brand {
+  font-size: 18px;
+  text-align: center;
+  color: #003c83;
+  font-weight: bold;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #003c83;
+  font-weight: bold;
+}
+
+.sidebar-nav .fa-li {
+  color: #003c83 !important;
+}
+
+@media(min-width:768px) {
+  #wrapper {
+      padding-left: 250px;
+  }
+
+  #wrapper.toggled {
+      padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+      background: #f9f9f9;
+      width: 250px;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+      width: 0;
+  }
+
+  #page-content-wrapper {
+      padding: 20px;
+      position: relative;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+  }
+}
+
+#sidebar-wrapper li.active > a:after {
+  border-right: 17px solid #f4f3ef;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -1px;
+}
+
+.sidebar-brand {
+  padding: 18px 0px;
+  margin: 0 20px;
+}
+
+.sidebar-brand img{
+  width: 50%;
+  padding: 18px 0px;
+  margin: 0 20px;
+}
+
+.navbar .navbar-nav > li > a p {
+  display: inline-block;
+  margin: 0;
+}
+p {
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+.navbar-default {
+  background-color: #f4f3ef;
+  border:0px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+#logout_sidebar_button {
+  position: absolute;
+  display: block;
+  bottom: 2em;
+  left: 0;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#logout_sidebar_button li{
+  text-indent: 2em;
+  line-height: 4em;
+}
+
+#logout_sidebar_button li a {
+  margin-left: 2em;
+  display: block;
+  text-decoration: none;
+  color: #003c83 !important;
+}
+
+#logout_sidebar_button li a:hover {
+  text-decoration: none;
+}
+
+#logout_sidebar_button li a:active,
+#logout_sidebar_button li a:focus {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar #logout_sidebar_button > li > a p {
+  display: inline-block;
+  margin: 0;
+}
+
+.table {
+  margin-bottom: 0px !important;
+  width: inherit !important;
+  text-align: center;
+}
+.table th{
+  background: #003c83;
+  color: #ffffff;
+}
+
+.dts_label {
+  display: none !important;
+}
+
+.dataTables_filter { 
+  display: none !important; 
+}
+
+.dataTables_scrollHeadInner {
+  width: inherit !important;
+}
+
+.navbar-custom {
+  background: #003c83;
+}
+
+.container-fluid {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/poppins-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v15-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+}

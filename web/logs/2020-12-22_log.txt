@@ -1,0 +1,91 @@
+2020-12-22 16:02:56.5058 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /api/withdrawal/withdraw QueryString:  Request Body: {
+    "barcode" : "2011111099*MC*ITEM.01/PARTNO.01*ITEM SAMPLE NO.01*PC*10",
+    "company" : "RGTC",
+    "date" : "12-22-2020"
+}
+2020-12-22 16:02:56.5058 | INFO | AddToWithdrawals | User=KMP0047 -- START
+2020-12-22 16:02:56.5058 | DEBUG | AddToWithdrawals | User=KMP0047 | Parsed barcode: 2011111099,MC,ITEM.01/PARTNO.01,ITEM SAMPLE NO.01,PC,10 
+2020-12-22 16:02:56.5058 | INFO | AddToWithdrawals | User=KMP0047 -- END
+2020-12-22 16:02:56.5058 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /api/withdrawal/withdraw QueryString:  Response Body: {"code":"Error","message":"Barcode is already pulled-out. Please scan a different barcode."}
+2020-12-22 16:03:07.4454 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /api/withdrawal/withdraw QueryString:  Request Body: {
+    "barcode" : "99999999999999*MC*ITEM.01/PARTNO.01*ITEM SAMPLE NO.01*PC*10",
+    "company" : "RGTC",
+    "date" : "12-22-2020"
+}
+2020-12-22 16:03:07.4454 | INFO | AddToWithdrawals | User=KMP0047 -- START
+2020-12-22 16:03:07.4454 | DEBUG | AddToWithdrawals | User=KMP0047 | Parsed barcode: 99999999999999,MC,ITEM.01/PARTNO.01,ITEM SAMPLE NO.01,PC,10 
+2020-12-22 16:03:07.4534 | DEBUG | AddToWithdrawals | User=KMP0047 | Inserting new Delivery : {"OID":0,"BarCode":"99999999999999*MC*ITEM.01/PARTNO.01*ITEM SAMPLE NO.01*PC*10","Company":"RGTC","RefOID":64,"Section":"MC","ItemCode":"KLP0000001","PartNo":"ITEM.01/PARTNO.01","ItemDescription":"ITEM SAMPLE NO.1","UnitOfMeasurement":"PCS","SPQ":15,"DeliveryDate":"2020-12-22T00:00:00","Status":"C","CreatedDate":"2020-12-22T16:03:07.4534772+08:00","CreatedBy":"rowell","UpdatedDate":"2020-12-22T16:03:07.4534772+08:00","UpdatedBy":"rowell","Error":null} 
+2020-12-22 16:03:07.5254 | INFO | AddToWithdrawals | User=KMP0047 -- END
+2020-12-22 16:03:07.5254 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /api/withdrawal/withdraw QueryString:  Response Body: 
+2020-12-22 16:03:26.2935 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /api/login QueryString:  Request Body: {
+    "mobileLogin" : "KMP0047",
+    "deviceId" : "16c5408d17ede84f"
+}
+2020-12-22 16:03:26.3025 | INFO | GetUserByMobileLogin | User=  -- START
+2020-12-22 16:03:26.3505 | INFO | GetUserByMobileLogin | User=  -- END
+2020-12-22 16:03:26.3505 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /api/login QueryString:  Response Body: {"mobileLogin":"KMP0047","username":"rowell","usertype":"adm","company":"KLP","name":"Rowell Basilio","ccc":"MC","authToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IktNUDAwNDciLCJkZXZpY2VJZCI6IjE2YzU0MDhkMTdlZGU4NGYiLCJsb2dpbklkIjoiS01QMDA0NyIsIm5iZiI6MTYwODYyNDIwNiwiZXhwIjoxNjA4NjI0NTA2LCJpYXQiOjE2MDg2MjQyMDZ9.l35J9I29OOEgTfC17tuKxNthOVW-O5ecAr_oVlFM1yo","refreshToken":"rHVBvddjgS20tK8hgrMO7/71l7mTRnvmYUxzxkBiQCA="}
+2020-12-22 16:03:47.2707 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /api/void/getVoidUser QueryString:  Request Body: {
+    "mobileLogin" : "KMP0047"
+}
+2020-12-22 16:03:47.2707 | INFO | CheckVoidUser | User=KMP0047 -- START
+2020-12-22 16:03:47.2847 | INFO | CheckVoidUser | User=KMP0047 -- END
+2020-12-22 16:03:47.2847 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /api/void/getVoidUser QueryString:  Response Body: {"mobileLogin":"KMP0047","username":"rowell","usertype":"adm","company":"KLP","name":"Rowell Basilio","ccc":"MC","authToken":null,"refreshToken":null}
+2020-12-22 16:04:06.5318 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /api/token/refresh QueryString:  Request Body: {
+    "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IktNUDAwNDciLCJkZXZpY2VJZCI6IjE2YzU0MDhkMTdlZGU4NGYiLCJsb2dpbklkIjoiS01QMDA0NyIsIm5iZiI6MTYwNzU4OTMyNSwiZXhwIjoxNjA3NTg5MzM1LCJpYXQiOjE2MDc1ODkzMjV9.G0OX7hgg_GjCkZRv-iEEee7jM8R7itkNveSUr56OUu0",
+    "refreshToken": "bgbB+e/0t96FHmHeGNq5y1MeCu7zhYlrojM05sP+4Xk="
+}
+2020-12-22 16:04:06.5318 | INFO | RefreshToken |  -- START
+2020-12-22 16:04:06.5318 | INFO | RefreshToken |  -- END
+2020-12-22 16:04:06.5458 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /api/token/refresh QueryString:  Response Body: {"code":"Error","message":"Invalid client request."}
+2020-12-22 16:15:07.5966 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /userDevice QueryString:  Request Body: 
+2020-12-22 16:15:07.5966 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /userDevice QueryString:  Response Body: View for /userDevice
+2020-12-22 16:15:07.5966 | INFO | Index | User=  -- START
+2020-12-22 16:15:07.5966 | INFO | Index | User=  -- END
+2020-12-22 16:15:07.6016 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /auth QueryString:  Request Body: 
+2020-12-22 16:15:07.6016 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /auth QueryString:  Response Body: View for /auth
+2020-12-22 16:15:09.4257 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /auth QueryString:  Request Body: username=rowell&password=testPassword
+2020-12-22 16:15:09.4257 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /auth QueryString:  Response Body: View for /auth
+2020-12-22 16:15:09.4257 | INFO | Login | User=  -- START
+2020-12-22 16:15:09.4487 | INFO | Login | User=  -- END
+2020-12-22 16:15:09.4487 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /userDevice QueryString:  Request Body: 
+2020-12-22 16:15:09.4487 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /userDevice QueryString:  Response Body: View for /userDevice
+2020-12-22 16:15:09.4487 | INFO | Index | User= rowell -- START
+2020-12-22 16:15:09.4567 | INFO | Index | User= rowell -- END
+2020-12-22 16:15:09.5967 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /userDevice/all QueryString:  Request Body: draw=1&columns%5B0%5D%5Bdata%5D=index&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=employeeNo&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=false&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=companyName&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=employeeName&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=lastLoginDate&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=status&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=userDeviceID&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&start=0&length=162&search%5Bvalue%5D=&search%5Bregex%5D=false
+2020-12-22 16:15:09.5967 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /userDevice/all QueryString:  Response Body: View for /userDevice/all
+2020-12-22 16:15:09.5967 | INFO | GetUserDevices | User= rowell -- START
+2020-12-22 16:15:09.5967 | INFO | GetUserDevices | User= rowell -- END
+2020-12-22 16:16:00.1566 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /auth/logout QueryString:  Request Body: 
+2020-12-22 16:16:00.1566 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /auth/logout QueryString:  Response Body: View for /auth/logout
+2020-12-22 16:16:00.1566 | INFO | Logout | User=  -- START
+2020-12-22 16:16:00.1566 | INFO | Logout | User=  -- END
+2020-12-22 16:16:00.1566 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /auth QueryString:  Request Body: 
+2020-12-22 16:16:00.1566 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /auth QueryString:  Response Body: View for /auth
+2020-12-22 16:16:43.4841 | INFO | LogRequest | Http Request Information:
+Schema:http Host: localhost:5000 Path: /auth QueryString:  Request Body: 
+2020-12-22 16:16:43.5131 | INFO | LogResponse | Http Response Information:
+Schema:http Host: localhost:5000 Path: /auth QueryString:  Response Body: View for /auth

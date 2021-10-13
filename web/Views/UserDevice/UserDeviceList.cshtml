@@ -1,0 +1,68 @@
+@{
+    ViewData["Title"] = "User List";
+}
+
+@if (ViewBag.Error != null)
+{
+  <div class="alert alert-danger alert-dismissible" role="alert" style="margin-top:20px;">
+      @ViewBag.Error
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+} else {
+  <div id="alertDanger" class="alert alert-danger alert-dismissible" role="alert" style="display: none; margin-top:20px;">
+    
+  </div> 
+}
+<table id="useListTable" class="table table-striped" style="width:100%;">
+    <thead>
+      <tr>
+          <th>ID</th>    
+          <th>Employee No</th>  
+          <th class="col-search">Company</th>  
+          <th class="col-search">Employee Name</th>  
+          <th>Last Login Date</th>  
+          <th class="col-select">Status</th>  
+          <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+</table>  
+
+<!--Modal: modalConfirmDelete-->
+<div class="modal fade center" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+    <!--Content-->
+    <div class="modal-content text-center modal-rounded">
+      <!--Header-->
+      <div class="modal-header justify-content-center" style="border-bottom-color: #fabe00 !important; border-width: medium;">
+            <div width=100%><i class="fas fa-exclamation-circle fa-2x red-text"></i></div>
+          <p class="modal-title">
+            Confirm Unlink
+          </p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+          <p>
+              This will unlink the user from the device currently logged in.
+            Further transactions from that device will no longer be allowed.
+            <br><br>
+            Do you want to proceed?</p>
+
+        <form method="POST" action="userDevice">
+            @Html.AntiForgeryToken()
+            <input type="hidden" id="userDevID" name="userDeviceID">
+            <button data-dismiss="modal" class="btn btn-lg modal-btn-cancel">No</button>
+            <button type="submit" class="btn btn-lg modal-btn-ok">Yes</button>
+        </form>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+<!--Modal: modalConfirmDelete-->

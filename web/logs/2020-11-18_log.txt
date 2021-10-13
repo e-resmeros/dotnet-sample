@@ -1,0 +1,1 @@
+2020-11-18 15:03:43.1900 DEBUG Test logging info

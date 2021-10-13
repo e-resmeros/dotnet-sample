@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="~/css/site.css" rel="stylesheet">
+    <link href="~/mdb/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/mdb/css/mdb.min.css" rel="stylesheet">
+    <link href="~/mdb/css/style.css" rel="stylesheet">
+    <link href="~/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/DataTables/css/jquery.dataTables.min.css"/>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script type="text/javascript" src="~/mdb/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/mdb/js/popper.min.js"></script>
+    <script type="text/javascript" src="~/mdb/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/mdb/js/mdb.min.js"></script>
+    <script type="text/javascript" src="~/DataTables/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="~/Scroller-2.0.3/js/dataTables.scroller.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

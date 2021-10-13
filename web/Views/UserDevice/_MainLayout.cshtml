@@ -1,0 +1,46 @@
+@{
+    Layout = "_Layout.cshtml";
+}
+
+<div id="wrapper" class="wrapper-content">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <img class="logo-sm" src="~/img/logo-sm.png"/>
+            </li>
+            <li><span class="fa-li"><i class="fas fa-user"></i></span><a>Users</a></li>
+        </ul>
+        <ul id="logout_sidebar_button">
+            <form action="auth/logout" method="post">
+                <li><span class="fa-li"><i class="fas fa-sign-out-alt"></i></span><a onclick="this.closest('form').submit()">Logout</a></li>
+            </form>
+        </ul>
+    </div>
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-custom">
+    
+    <a class="navbar-brand white-text" href="#">User List</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <ul class="navbar-nav ml-auto nav-flex-icons white-text">
+        <li class="nav-item dropdown">
+            @{
+                var name = ViewData["empName"];
+            }
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user white-text"></i> @name
+            </a>
+            <form action="auth/logout" method="post">
+                <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333">
+                <a onclick="this.closest('form').submit()">Logout</a>
+                </div>
+            </form>
+        </li>
+        </ul>
+    </div>
+    </nav>
+    <!--/.Navbar -->
+    <div id="page-content-wrapper">
+        @RenderBody()
+</div>
